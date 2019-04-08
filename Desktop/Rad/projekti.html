@@ -24,13 +24,46 @@
                 opacity: 1;
             }
         }
+
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 99;
+            font-size: 10px;
+            border: none;
+            outline: none;
+            background-color: #5bc0de;
+            color: white;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0px;
+        }
     </style>
+
+    <title>Projekti</title>
 
 </head>
 
-<body>
+<body style="height: 1500px;">
+    <!--Dugme za povratak na vrh strane - početak-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="chevron-up.png" alt="go_to_top"
+            style="width: 32px; height: 32px;"></button>
+    <!--Dugme za povratak na vrh strane - kraj-->
+
     <!--Zvuk u pozadini početak-->
-    <embed src="time.ogg" type="" autostart="true" loop="true" height="0" width="0">
+    <embed src="time.ogg" type="audio/ogg" autostart="true" loop="true" height="0" width="0">
     <!--Zvuk u pozadini kraj-->
     <!--Navbar početak-->
     <nav class="navbar bg-dark navbar-expand-md navbar-dark fixed-top">
@@ -52,20 +85,84 @@
 
         </div>
         <form class="form-inline">
-            <input class="form-control" type="text" placeholder="Pretraga" aria-label="Search">
+            <input class="form-control" type="text" placeholder="Pretraga" aria-label="pretraga">
         </form>
     </nav>
     <!--Navbar kraj-->
     <div class="container">
         <!--Header početak-->
         <div class="row">
-            <div class="offset-sm-9"><img class="img-bane img-responsive" src="bane.png" style="margin-top:50px;"></div>
+            <div class="offset-sm-9"><img class="img-bane img-responsive" src="bane.png" style="margin-top:25px;"
+                    alt="bane"></div>
         </div>
-        <!--Header kraj-->
-        <!--Footer početak-->
-
-        <!--Footer kraj-->
     </div>
+    <!--Header kraj-->
+
+    <div style="height: 1000px;"></div>
+    <!--div za testiranje-->
+
+    <!-- Footer početak-->
+    <footer class="fixed-bottom footer pt-4 bg-dark">
+        <div class="container text-center text-md-left">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-left text-light">© 2019 Copyright:
+                        <a href="#top">
+                            <strong>_bane</strong>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4 ml-lg-0">
+                    <!-- Social buttons početak-->
+                    <div class="text-center text-md-right">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/" title="Twitter" class="btn-floating btn-sm mx-1"><img
+                                        src="twitter.png" style="width: 32px; height: 32px;" alt="Twitter">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/" title="Facebook" class="btn-floating btn-sm mx-1">
+                                    <img src="facebook.png" style="width: 32px; height: 32px;" alt="Facebook">
+                                </a>
+                            </li>
+
+                            <li class="list-inline-item">
+                                <a href="https://github.com/" title="GitHub" class="btn-floating btn-sm mx-1">
+                                    <img src="github.png" style="width: 32px; height: 32px;" alt="GitHub">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.skype.com/" title="Skype" class="btn-floating btn-sm mx-1">
+                                    <img src="skype.png" style="width: 32px; height: 32px;" alt="Skype">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Social buttons kraj-->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer kraj-->
+
+    <!--Skripta za dugme povratak na vrh - početak-->
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!--Skripta za dugme povratak na vrh - kraj-->
+
 </body>
 
 </html>
