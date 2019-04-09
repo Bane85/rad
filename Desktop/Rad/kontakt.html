@@ -55,7 +55,7 @@
 
 </head>
 
-<body style="height: 1500px;">
+<body>
     <!--Dugme za povratak na vrh strane - početak-->
     <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="chevron-up.png" alt="go_to_top"
             style="width: 32px; height: 32px;"></button>
@@ -89,84 +89,131 @@
         </form>
     </nav>
     <!--Navbar kraj-->
+    <!--Sadržaj strane - početak-->
     <div class="container">
-        <!--Header početak-->
         <div class="row">
-            <div class="offset-sm-9"><img class="img-bane img-responsive" src="bane.png" style="margin-top:25px;"
-                    alt="bane"></div>
+            <h4 class="mt-5">Možete me naći na sledećoj lokaciji ili kontaktirati putem forme</h4>
         </div>
-    </div>
-    <!--Header kraj-->
-    <div class="row">
-        <!--Mapa početak-->
-        <div  class="col-sm-4 offset-sm-2" id="googleMap" style="width:400px;height:400px;"></div>
-        <script>
-            function myMap() {
-                var mapProp = {
-                    center: new google.maps.LatLng(-6.256936, 39.534820),
-                    zoom: 12,
-                };
-                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-            }
-        </script>
+        <div class="row">
+            <!--Mapa početak-->
+            <div class="col-sm-6 mt-3" id="map" style="width:400px;height:400px;">
+                <script>
+                    function initMap() {
+                        var beograd = { lat: 44.823292, lng: 20.447556 };
+                        var map = new google.maps.Map(
+                            document.getElementById('map'), { zoom: 16, center: beograd });
+                        var marker = new google.maps.Marker({ position: beograd, map: map });
+                    }               
+                </script>
+                <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsEtCPmbqk6nHCgplAmYRtgY7Ha2ICVcI&callback=initMap">
+                    </script>
+            </div>
+            <!--Mapa kraj-->
 
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsEtCPmbqk6nHCgplAmYRtgY7Ha2ICVcI&callback=myMap"></script>
-        <!--Mapa kraj-->
+            <!--Kontakt forma - početak-->
+            <form class="form col-sm-5 offset-sm-1 mt-3">
+                <!--ime-->
+                <div class="row">
+                    <label for="ime">Ime*: <input id="ime" type="text" name="ime" maxlength="15" placeholder="Ime"
+                            class="form-control mb-2" required></label>
+                </div>
+                <!--prezime-->
+                <div class="row">
+                    <label for="prezime">Prezime: <input id="prezime" type="text" name="prezime" maxlength="20"
+                            placeholder="Prezime" class="form-control mb-2"> </label>
+                </div>
+                <!--email-->
+                <div class="row">
+                    <label for="email">Email*: <input id="email" type="email" name="email"
+                            placeholder="example@gmail.com" class="form-control mb-2" required></label>
+                </div>
+                <!--broj telefona-->
+                <div class="row">
+                    <label for="mobilni">Broj telefona: </label>
+                </div>
+                <div class="row">
+                    <select name="mobilni" id="mobilni" class="form-control col-3 mb-2">
+                        <option value="060">060</option>
+                        <option value="061">061</option>
+                        <option value="062">062</option>
+                        <option value="063">063</option>
+                        <option value="064">064</option>
+                        <option value="065">065</option>
+                        <option value="066">066</option>
+                    </select>
+                    <input id="mobilni_broj" type="text" name="mobilni_broj" placeholder="1234567" maxlength="7"
+                        class="form-control col-9 mb-2">
+                </div>
+                <div class="row">
+                    <label for="komentar">Poruka*:</label>
+                </div>
+                <div class="row"> <textarea name="poruka" id="komentar" cols="50" rows="4"
+                        placeholder="Upišite Vašu poruku u ovo polje" class="form-control mb-2" required></textarea>
+                </div>
+                <hr>
+                <label for="dokument">Ovde nam možete proslediti fajl
+                    <input type="file" name="dokument" id="dokument" class="btn"></label>
+                <hr>
+                <div class="row">
+                    <button type="submit" class="btn btn-info col-12 mb-5">Pošalji</button>
+                </div>
+                <hr>
 
-        <!--Kontakt forma - početak-->
-        
+            </form>
+        </div>
         <!--Kontakt forma - kraj-->
-
     </div>
-
-    <div style="height: 1000px;"></div>
-    <!--div za testiranje-->
+    </div>
+    <!--Sadržaj strane - kraj-->
 
 
     <!-- Footer početak-->
-    <footer class="fixed-bottom footer pt-4 bg-dark">
-        <div class="container text-center text-md-left">
-            <div class="row d-flex align-items-center">
-                <div class="col-md-7 col-lg-8">
-                    <p class="text-center text-md-left text-light">© 2019 Copyright:
-                        <a href="#top">
-                            <strong>_bane</strong>
-                        </a>
-                    </p>
-                </div>
-                <div class="col-md-5 col-lg-4 ml-lg-0">
-                    <!-- Social buttons početak-->
-                    <div class="text-center text-md-right">
-                        <ul class="list-inline">
-                            <li class="list-inline-item">
-                                <a href="https://twitter.com/" title="Twitter" class="btn-floating btn-sm mx-1"><img
-                                        src="twitter.png" style="width: 32px; height: 32px;" alt="Twitter">
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://www.facebook.com/" title="Facebook" class="btn-floating btn-sm mx-1">
-                                    <img src="facebook.png" style="width: 32px; height: 32px;" alt="Facebook">
-                                </a>
-                            </li>
-
-                            <li class="list-inline-item">
-                                <a href="https://github.com/" title="GitHub" class="btn-floating btn-sm mx-1">
-                                    <img src="github.png" style="width: 32px; height: 32px;" alt="GitHub">
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://www.skype.com/" title="Skype" class="btn-floating btn-sm mx-1">
-                                    <img src="skype.png" style="width: 32px; height: 32px;" alt="Skype">
-                                </a>
-                            </li>
-                        </ul>
+    <div class="row">
+        <footer class="fixed-bottom footer pt-4 bg-dark">
+            <div class="container text-center text-md-left">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-7 col-lg-8">
+                        <p class="text-center text-md-left text-light">© 2019 Copyright:
+                            <a href="#top">
+                                <strong>_bane</strong>
+                            </a>
+                        </p>
                     </div>
-                    <!-- Social buttons kraj-->
+                    <div class="col-md-5 col-lg-4 ml-lg-0">
+                        <!-- Social buttons početak-->
+                        <div class="text-center text-md-right">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="https://twitter.com/" title="Twitter" class="btn-floating btn-sm mx-1"><img
+                                            src="twitter.png" style="width: 32px; height: 32px;" alt="Twitter">
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com/" title="Facebook"
+                                        class="btn-floating btn-sm mx-1">
+                                        <img src="facebook.png" style="width: 32px; height: 32px;" alt="Facebook">
+                                    </a>
+                                </li>
+
+                                <li class="list-inline-item">
+                                    <a href="https://github.com/" title="GitHub" class="btn-floating btn-sm mx-1">
+                                        <img src="github.png" style="width: 32px; height: 32px;" alt="GitHub">
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.skype.com/" title="Skype" class="btn-floating btn-sm mx-1">
+                                        <img src="skype.png" style="width: 32px; height: 32px;" alt="Skype">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Social buttons kraj-->
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
     <!-- Footer kraj-->
 
     <!--Skripta za dugme povratak na vrh - početak-->
