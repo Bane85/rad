@@ -10,22 +10,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <style>
-        .img-bane {
-            border-radius: 50%;
-            animation: ulazak 5s;
-        }
-
-        @keyframes ulazak {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-
         #myBtn {
             display: none;
             position: fixed;
@@ -50,13 +34,19 @@
             position: fixed;
             bottom: 0px;
         }
+
+        body {
+            background-image: linear-gradient(#343a40 0 10%, #17a2b8 50%, #343a40 90% 100%);
+        }
+
+
     </style>
 
     <title>Projekti</title>
 
 </head>
 
-<body style="height: 1500px;">
+<body style="height: 1200px;">
     <!--Dugme za povratak na vrh strane - početak-->
     <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="chevron-up.png" alt="go_to_top"
             style="width: 32px; height: 32px;"></button>
@@ -89,11 +79,26 @@
         </form>
     </nav>
     <!--Navbar kraj-->
-    <div class="container">
- 
 
-    <div style="height: 1000px;"></div>
-    <!--div za testiranje-->
+    <div class="container mt-5 mb-5" style="height:1200px;">
+        <div class="row p-3">
+            <div class="col-sm-6"><img src="camidusplus.png" alt="camidusplus" class="img-thumbnail"></div>
+            <div class="col-sm-6 display-1"><span class="align-middle">Camidus</span></div>
+        </div>
+        <div class="row p-3">
+            <div class="col-sm-6 display-1"><span class="align-middle">MeLuna</span></div>
+            <div class="col-sm-6"><img src="meluna.png" alt="meluna" class="img-thumbnail"></div>
+        </div>
+        <div class="row p-3">
+            <div class="col-sm-6"><img src="macmac.png" alt="macmac" class="img-thumbnail"></div>
+            <div class="col-sm-6 display-1"><span class="align-middle">Mac, mac</span></div>
+        </div>
+        <div class="row p-3">
+            <div class="col-sm-6 display-1"><span class="align-middle">...</span></div>
+            <div class="col-sm-6"><img src="tritacke.png" alt="tritacke" class="img-thumbnail"></div>
+        </div>
+    </div>
+
 
     <!-- Footer početak-->
     <footer class="fixed-bottom footer pt-4 bg-dark">

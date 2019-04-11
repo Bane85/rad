@@ -10,20 +10,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <style>
-        .img-bane {
-            border-radius: 50%;
-            animation: ulazak 5s;
-        }
-
-        @keyframes ulazak {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
 
         #myBtn {
             display: none;
@@ -34,7 +20,7 @@
             font-size: 10px;
             border: none;
             outline: none;
-            background-color: #5bc0de;
+            background-color: #f7f7f7;
             color: white;
             cursor: pointer;
             padding: 5px;
@@ -42,12 +28,16 @@
         }
 
         #myBtn:hover {
-            background-color: #555;
+            background-color: #17a2b8;
         }
 
         footer {
             position: fixed;
             bottom: 0px;
+        }
+
+        body {
+            background-image: linear-gradient(#343a40 0 10%, #17a2b8 50%, #343a40 90% 100%);
         }
     </style>
 
@@ -55,7 +45,7 @@
 
 </head>
 
-<body>
+<body style="height: 1000px;">
     <!--Dugme za povratak na vrh strane - početak-->
     <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="chevron-up.png" alt="go_to_top"
             style="width: 32px; height: 32px;"></button>
@@ -92,7 +82,7 @@
     <!--Sadržaj strane - početak-->
     <div class="container">
         <div class="row">
-            <h4 class="mt-5">Možete me naći na sledećoj lokaciji ili kontaktirati putem forme</h4>
+            <h4 class="mt-5 text-light">Možete me naći na sledećoj lokaciji ili kontaktirati putem forme</h4>
         </div>
         <div class="row">
             <!--Mapa početak-->
@@ -115,22 +105,22 @@
             <form class="form col-sm-5 offset-sm-1 mt-3">
                 <!--ime-->
                 <div class="row">
-                    <label for="ime">Ime*: <input id="ime" type="text" name="ime" maxlength="15" placeholder="Ime"
+                    <label for="ime" class="text-light">Ime*: <input id="ime" type="text" name="ime" maxlength="15" placeholder="Ime"
                             class="form-control mb-2" required></label>
                 </div>
                 <!--prezime-->
                 <div class="row">
-                    <label for="prezime">Prezime: <input id="prezime" type="text" name="prezime" maxlength="20"
+                    <label for="prezime" class="text-light">Prezime: <input id="prezime" type="text" name="prezime" maxlength="20"
                             placeholder="Prezime" class="form-control mb-2"> </label>
                 </div>
                 <!--email-->
                 <div class="row">
-                    <label for="email">Email*: <input id="email" type="email" name="email"
+                    <label for="email" class="text-light">Email*: <input id="email" type="email" name="email"
                             placeholder="example@gmail.com" class="form-control mb-2" required></label>
                 </div>
                 <!--broj telefona-->
                 <div class="row">
-                    <label for="mobilni">Broj telefona: </label>
+                    <label for="mobilni" class="text-light">Broj telefona: </label>
                 </div>
                 <div class="row">
                     <select name="mobilni" id="mobilni" class="form-control col-3 mb-2">
@@ -146,24 +136,23 @@
                         class="form-control col-9 mb-2">
                 </div>
                 <div class="row">
-                    <label for="komentar">Poruka*:</label>
+                    <label for="komentar" class="text-light">Poruka*:</label>
                 </div>
                 <div class="row"> <textarea name="poruka" id="komentar" cols="50" rows="4"
                         placeholder="Upišite Vašu poruku u ovo polje" class="form-control mb-2" required></textarea>
                 </div>
                 <hr>
-                <label for="dokument">Ovde nam možete proslediti fajl
+                <label for="dokument" class="text-light">Ovde mi možete proslediti fajl
                     <input type="file" name="dokument" id="dokument" class="btn"></label>
                 <hr>
                 <div class="row">
-                    <button type="submit" class="btn btn-info col-12 mb-5">Pošalji</button>
+                    <button type="submit" class="btn btn-info text-light col-12 mb-5">Pošalji</button>
                 </div>
-                <hr>
 
             </form>
         </div>
         <!--Kontakt forma - kraj-->
-    </div>
+
     </div>
     <!--Sadržaj strane - kraj-->
 

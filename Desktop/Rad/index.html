@@ -50,15 +50,195 @@
             position: fixed;
             bottom: 0px;
         }
+
+        body {
+            background-image: linear-gradient(#343a40 0 10%, #17a2b8 50%, #343a40 90% 100%);
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 200px;
+        }
+
+
+
+        .text-flicker-in-glow {
+            animation: text-flicker-in-glow 5s linear both;
+        }
+
+        @keyframes text-flicker-in-glow {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            10.1% {
+                opacity: 1;
+                text-shadow: none;
+            }
+
+            10.2% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            20% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            20.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+            }
+
+            20.6% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            30% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            30.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+
+            30.5% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+
+            30.6% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            45% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            45.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+
+            50% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+
+            55% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+            }
+
+            55.1% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            57% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            57.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+            }
+
+            60% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+            }
+
+            60.1% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            65% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            65.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+
+            75% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+
+            75.1% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            77% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            77.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+
+            85% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+
+            85.1% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            86% {
+                opacity: 0;
+                text-shadow: none;
+            }
+
+            86.1% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        td {
+            min-width: 200px;
+        }
+
+        ul {
+            list-style-image: url("list.png");
+        }
     </style>
 
     <title>O meni</title>
 
 </head>
 
-<body style="height: 1500px;">
+<body>
     <!--Dugme za povratak na vrh strane - početak-->
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="chevron-up.png" alt="go_to_top" style="width: 32px; height: 32px;"></button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="chevron-up.png" alt="go_to_top"
+            style="width: 32px; height: 32px;"></button>
     <!--Dugme za povratak na vrh strane - kraj-->
 
     <!--Zvuk u pozadini početak-->
@@ -82,7 +262,6 @@
                     <a class="nav-link" href="projekti.html">Projekti</a>
                 </li>
             </ul>
-
         </div>
         <form class="form-inline">
             <input class="form-control" type="text" placeholder="Pretraga" aria-label="pretraga">
@@ -92,14 +271,228 @@
     <div class="container">
         <!--Header početak-->
         <div class="row">
-            <div class="offset-sm-9"><img class="img-bane img-responsive" src="bane.png" style="margin-top:25px;"
-                    alt="bane"></div>
+            <h1 class="display-1 mt-5 offset-sm-3 text-light text-flicker-in-glow"
+                style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Bane</h1>
+            <div class="offset-sm-2"><img class="img-bane img-responsive mt-3" src="bane.png" alt="bane"></div>
         </div>
     </div>
     <!--Header kraj-->
 
-    <div style="height: 1000px;"></div>
-    <!--div za testiranje-->
+    <div class="container mt-5">
+        <div class="card-group ">
+            <div class="card p-3 col-md-4 m-1">
+                <div class="card-img">
+                    <img src="posao.jpg" alt="posao">
+                </div>
+                <div class="card-box">
+                    <h4 class="card-title mbr-fonts-style display-7">
+                        Radno iskustvo
+                    </h4>
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        Direktor u prevodilačkoj agenciji "CAMIDUS"
+                    </p>
+                </div>
+                <div class="mbr-section-btn text-center">
+                    <a href="#radnoiskustvo" class="btn btn-success display-4">
+                        Opširnije
+                    </a>
+                </div>
+            </div>
+
+            <div class="card p-3 col-md-4 m-1">
+                <div class="card-img">
+                    <img src="skola.jpg" alt="skola">
+                </div>
+                <div class="card-box">
+                    <h4 class="card-title mbr-fonts-style display-7">
+                        Obrazovanje
+                    </h4>
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        Inženjer železničkog saobraćaja
+                    </p>
+                </div>
+                <div class="mbr-section-btn text-center">
+                    <a href="#obrazovanje" class="btn btn-warning display-4">
+                        Opširnije
+                    </a>
+                </div>
+            </div>
+
+            <div class="card p-3 col-md-4 m-1">
+                <div class="card-img">
+                    <img src="znanjaivestine.jpg" alt="znanja">
+                </div>
+                <div class="card-box">
+                    <h4 class="card-title mbr-fonts-style display-7">
+                        Znanja i veštine
+                    </h4>
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        Inženjer železničkog saobraćaja
+                    </p>
+                </div>
+                <div class="mbr-section-btn text-center">
+                    <a href="#znanjaivestine" class="btn btn-danger display-4">
+                        Opširnije
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!--Tabele - početak-->
+        <div class="container mt-5">
+            <table class="table table-bordered">
+                <thead>
+                    <th colspan="2" class="bg-success mt-5"><a name="radnoiskustvo">Radno iskustvo</a></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="bg-light">Kompanija</th>
+                        <th class="bg-light">Camidus, Prevodilačka agencija</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Glavna zaduženja i odgovornosti</td>
+                        <td><strong>Direktor</strong>, (decembar 2015 -)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul class="text-light">
+                                <li>Izgradnja i vođenje portfolija klijenata</li>
+                                <li>Administrativno i finansijsko vođenje rada agencije</li>
+                                <li>Delegiranje zadataka članovima prevodilačkog tima i kontrola kvaliteta</li>
+                                <li>Kreiranje i priprema marketinških aktivnosti agencije</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Kompanija</th>
+                        <th class="bg-light">Apex Solution Technology d.o.o.</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Glavna zaduženja i odgovornosti</td>
+                        <td><strong>Koordinator BusPlus projekta</strong>, (avgust 2011-)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul class="text-light">
+                                <li>Rad sa klijentima – prikupljanje, obrada i kontrola podataka</li>
+                                <li>Koordinacija zaposlenih, obuka i kontrola rada, podrška u komunikaciji sa
+                                    klijentima
+                                </li>
+                                <li>Personalizacija BusPlus kartica</li>
+                                <li>Redovna nabavka potrošnog materijala</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <th colspan="2" class="bg-warning"><a name="obrazovanje">Obrazovanje</a></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Visoka železnička škola strukovnih studija , Univerzitet u Beogradu</th>
+                    </tr>
+                    <tr class="text-light">
+                        <td>
+                            <ul>
+                                <li>Inženjer železničkog saobraćaja</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Železnička tehnička škola, Beograd</th>
+                    </tr>
+                    <tr class="text-light">
+                        <td>
+                            <ul>
+                                <li>Elektrotehničar telekomunikacija</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <th colspan="2" class="bg-danger"><a name="znanjaivestine">Znanja i veštine</a></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lične karakteristike</td>
+                        <td>
+                            <ul class="text-light">
+                                <li>Odlične organizacione veštine planiranja, delegiranje, zaduženja u okviru tima,
+                                </li>
+                                <li>Razvijene komunikacione veštine u odnosu sa klijentima i zaposlenima unutar
+                                    kompanije,
+                                </li>
+                                <li>Uspešan u timskom radu, posebno u zadacima koji zahtevaju da se informacije brzo
+                                    prepoznaju,
+                                    koordinirajući na taj način aktivnosti efikasno,</li>
+                                <li>Fleksibilan i brzo prilagodljiv,</li>
+                                <li>Strpljiv i izdržljiv.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jezici</td>
+                        <td>
+                            <ul class="text-light">
+                                <li>Srpski - Maternji jezik</li>
+                                <li>Engleski – Fluentno čitanje, odlično razumevanje govornog i pisanog jezika,
+                                    srednje
+                                    napredan
+                                    nivo u pisanju i govoru</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Računari</td>
+                        <td>
+                            <ul class="text-light">
+                                <li>Napredno znanje u korišćenju uobičajenih kancelarijskih softvera i programa</li>
+                                <li>Osnovno poznavanje web programiranja</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Vozačka dozvola</td>
+                        <td>
+                            <ul class="text-light">
+                                <li>B kategorija (aktivan vozač)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <table class="table table-bordered">
+                <thead>
+                    <th class="bg-info">Projekti</th>
+                </thead>
+                <tbody class="text-light">
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Camidus</li>
+                                <li>MeLuna</li>
+                                <li>Mac, mac</li>
+                                <li>...</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--Tabele - kraj-->
+
+    </div>
+    <div style="height: 100px;" class="mb-5"></div>
 
     <!-- Footer početak-->
     <footer class="fixed-bottom footer pt-4 bg-dark">
