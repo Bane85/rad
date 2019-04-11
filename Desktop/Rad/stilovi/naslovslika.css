@@ -1,0 +1,14 @@
+.img-bane {
+    border-radius: 50%;
+    animation: ulazak 5s;
+}
+
+@keyframes ulazak {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

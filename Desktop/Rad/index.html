@@ -9,227 +9,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <style>
-        .img-bane {
-            border-radius: 50%;
-            animation: ulazak 5s;
-        }
-
-        @keyframes ulazak {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-
-        #myBtn {
-            display: none;
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            z-index: 99;
-            font-size: 10px;
-            border: none;
-            outline: none;
-            background-color: #5bc0de;
-            color: white;
-            cursor: pointer;
-            padding: 5px;
-            border-radius: 10px;
-        }
-
-        #myBtn:hover {
-            background-color: #555;
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0px;
-        }
-
-        body {
-            background-image: linear-gradient(#343a40 0 10%, #17a2b8 50%, #343a40 90% 100%);
-        }
-
-        .card-img img {
-            width: 100%;
-            height: 200px;
-        }
-
-
-
-        .text-flicker-in-glow {
-            animation: text-flicker-in-glow 5s linear both;
-        }
-
-        @keyframes text-flicker-in-glow {
-            0% {
-                opacity: 0;
-            }
-
-            10% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            10.1% {
-                opacity: 1;
-                text-shadow: none;
-            }
-
-            10.2% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            20% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            20.1% {
-                opacity: 1;
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
-            }
-
-            20.6% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            30% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            30.1% {
-                opacity: 1;
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-            }
-
-            30.5% {
-                opacity: 1;
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-            }
-
-            30.6% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            45% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            45.1% {
-                opacity: 1;
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-            }
-
-            50% {
-                opacity: 1;
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-            }
-
-            55% {
-                opacity: 1;
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
-            }
-
-            55.1% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            57% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            57.1% {
-                opacity: 1;
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
-            }
-
-            60% {
-                opacity: 1;
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
-            }
-
-            60.1% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            65% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            65.1% {
-                opacity: 1;
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
-            }
-
-            75% {
-                opacity: 1;
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
-            }
-
-            75.1% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            77% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            77.1% {
-                opacity: 1;
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
-            }
-
-            85% {
-                opacity: 1;
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
-            }
-
-            85.1% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            86% {
-                opacity: 0;
-                text-shadow: none;
-            }
-
-            86.1% {
-                opacity: 1;
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
-            }
-
-            100% {
-                opacity: 1;
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
-            }
-        }
-
-        td {
-            min-width: 200px;
-        }
-
-        ul {
-            list-style-image: url("list.png");
-        }
-    </style>
+    <link rel="stylesheet" style="text/css" href="stilovi/bootstrap.css">
+    <link rel="stylesheet" style="text/css" href="stilovi/osnovni.css">
+    <link rel="stylesheet" style="text/css" href="stilovi/tabeleiliste.css">
+    <link rel="stylesheet" style="text/css" href="stilovi/naslovime.css">
+    <link rel="stylesheet" style="text/css" href="stilovi/naslovslika.css">
+    <link rel="stylesheet" style="text/css" href="stilovi/karticeslika.css">
 
     <title>O meni</title>
 
@@ -237,12 +22,12 @@
 
 <body>
     <!--Dugme za povratak na vrh strane - početak-->
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="chevron-up.png" alt="go_to_top"
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="pics/chevron-up.png" alt="go_to_top"
             style="width: 32px; height: 32px;"></button>
     <!--Dugme za povratak na vrh strane - kraj-->
 
     <!--Zvuk u pozadini početak-->
-    <embed src="time.ogg" type="audio/ogg" autostart="true" loop="true" height="0" width="0">
+    <embed src="sound/GoT.ogg" type="audio/ogg" autostart="true" loop="true" height="0" width="0">
     <!--Zvuk u pozadini kraj-->
 
     <!--Navbar početak-->
@@ -268,21 +53,22 @@
         </form>
     </nav>
     <!--Navbar kraj-->
+    <!--Header početak-->
     <div class="container">
-        <!--Header početak-->
         <div class="row">
-            <h1 class="display-1 mt-5 offset-sm-3 text-light text-flicker-in-glow"
+            <h1 class="display-1 mt-5 offset-3 col-4 text-light text-flicker-in-glow"
                 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Bane</h1>
-            <div class="offset-sm-2"><img class="img-bane img-responsive mt-3" src="bane.png" alt="bane"></div>
+            <div class="offset-4 offset-sm-1"><img class="img-bane img-responsive mt-3" src="pics/bane.png" alt="bane"></div>
         </div>
     </div>
     <!--Header kraj-->
 
+    <!--Kartice - početak -->
     <div class="container mt-5">
         <div class="card-group ">
-            <div class="card p-3 col-md-4 m-1">
+            <div class="card p-3 col-sm-4 m-1">
                 <div class="card-img">
-                    <img src="posao.jpg" alt="posao">
+                    <img src="pics/posao.jpg" alt="posao">
                 </div>
                 <div class="card-box">
                     <h4 class="card-title mbr-fonts-style display-7">
@@ -299,9 +85,9 @@
                 </div>
             </div>
 
-            <div class="card p-3 col-md-4 m-1">
+            <div class="card p-3 col-sm-4 m-1">
                 <div class="card-img">
-                    <img src="skola.jpg" alt="skola">
+                    <img src="pics/skola.jpg" alt="skola">
                 </div>
                 <div class="card-box">
                     <h4 class="card-title mbr-fonts-style display-7">
@@ -318,9 +104,9 @@
                 </div>
             </div>
 
-            <div class="card p-3 col-md-4 m-1">
+            <div class="card p-3 col-sm-4 m-1">
                 <div class="card-img">
-                    <img src="znanjaivestine.jpg" alt="znanja">
+                    <img src="pics/znanjaivestine.jpg" alt="znanja">
                 </div>
                 <div class="card-box">
                     <h4 class="card-title mbr-fonts-style display-7">
@@ -336,16 +122,17 @@
                     </a>
                 </div>
             </div>
-
-
         </div>
-
-
+        <!--Kartice - kraj -->
+        <hr>
         <!--Tabele - početak-->
         <div class="container mt-5">
+            <a name="radnoiskustvo">
+                <h1 class="p-4"></h1>
+            </a>
             <table class="table table-bordered">
                 <thead>
-                    <th colspan="2" class="bg-success mt-5"><a name="radnoiskustvo">Radno iskustvo</a></th>
+                    <th colspan="2" class="bg-success mt-5">Radno iskustvo</th>
                 </thead>
                 <tbody>
                     <tr>
@@ -389,9 +176,12 @@
                 </tbody>
             </table>
             <hr>
+            <a name="obrazovanje">
+                <h1 class="p-4"></h1>
+            </a>
             <table class="table table-striped table-bordered">
                 <thead>
-                    <th colspan="2" class="bg-warning"><a name="obrazovanje">Obrazovanje</a></th>
+                    <th colspan="2" class="bg-warning">Obrazovanje</th>
                 </thead>
                 <tbody>
                     <tr>
@@ -417,9 +207,12 @@
                 </tbody>
             </table>
             <hr>
+            <a name="znanjaivestine">
+                    <h1 class="p-4"></h1>
+                </a>
             <table class="table table-striped table-bordered">
                 <thead>
-                    <th colspan="2" class="bg-danger"><a name="znanjaivestine">Znanja i veštine</a></th>
+                    <th colspan="2" class="bg-danger">Znanja i veštine</th>
                 </thead>
                 <tbody>
                     <tr>
@@ -511,23 +304,23 @@
                         <ul class="list-inline">
                             <li class="list-inline-item">
                                 <a href="https://twitter.com/" title="Twitter" class="btn-floating btn-sm mx-1"><img
-                                        src="twitter.png" style="width: 32px; height: 32px;" alt="Twitter">
+                                        src="pics/twitter.png" style="width: 32px; height: 32px;" alt="Twitter">
                                 </a>
                             </li>
                             <li class="list-inline-item">
                                 <a href="https://www.facebook.com/" title="Facebook" class="btn-floating btn-sm mx-1">
-                                    <img src="facebook.png" style="width: 32px; height: 32px;" alt="Facebook">
+                                    <img src="pics/facebook.png" style="width: 32px; height: 32px;" alt="Facebook">
                                 </a>
                             </li>
 
                             <li class="list-inline-item">
                                 <a href="https://github.com/" title="GitHub" class="btn-floating btn-sm mx-1">
-                                    <img src="github.png" style="width: 32px; height: 32px;" alt="GitHub">
+                                    <img src="pics/github.png" style="width: 32px; height: 32px;" alt="GitHub">
                                 </a>
                             </li>
                             <li class="list-inline-item">
                                 <a href="https://www.skype.com/" title="Skype" class="btn-floating btn-sm mx-1">
-                                    <img src="skype.png" style="width: 32px; height: 32px;" alt="Skype">
+                                    <img src="pics/skype.png" style="width: 32px; height: 32px;" alt="Skype">
                                 </a>
                             </li>
                         </ul>
